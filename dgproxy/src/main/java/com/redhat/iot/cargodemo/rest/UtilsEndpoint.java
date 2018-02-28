@@ -347,34 +347,33 @@ public class UtilsEndpoint {
     };
 
     public static final String[] ORIGINS = new String[]{
-            "Winter Springs, FL",
-            "Raleigh, NC",
-            "Westford, MA",
-            "Atlanta, GA",
-            "Charleston, SC",
-            "Tarboro, NC",
-            "Huntsville, AL",
-            "Knoxville, TN",
-            "Showshoe, WV",
-            "Washington, D.C.",
-            "Virginia Beach, VA",
-            "New York, NY",
-            "Jacksonville, FL"
+            "Albacete, Spain",
+			"Tarragona, Spain",
+			"Lugo, Spain",
+			"Toledo, Spain",
+			"Palencia, Spain",
+			"Melilla, Spain",
+			"Segovia, Spain",
+			"Teruel, Spain",
+            "Badajoz, Spain",
+            "Murcia, Spain",
+            "Burgos, Spain",
+            "Granada, Spain",
+            "Santander, Spain"
     };
 
     public static final String[] DESTS = new String[]{
-            "Chatanooga, TN",
-            "Louisville, KY",
-            "Omaha, NE",
-            "Chicago, IL",
-            "Des Moines, IA",
-            "Lexington, KY",
-            "New Orleans, LA",
-            "Mobile, AL"
+            "Bilbao, Spain",
+            "Madrid, Spain",
+            "Barcelona, Spain",
+            "Sevilla, Spain",
+			"Valencia, Spain",
+			"Alicante, Spain",
+			"Zaragoza, Spain",
+			"Lisboa, Portugal"
     };
 
     public static final String[] VEHICLE_TYPES = new String[] {
-
             "Box truck",
             "Van",
             "Cutaway van chassis",
@@ -397,40 +396,40 @@ public class UtilsEndpoint {
     };
 
     public static final String[] PKG_DESCS = new String[] {
-            "Spare F-22 Parts",
-            "Violins",
-            "Antique Baseballs",
-            "Frozen Cells",
-            "Machined Parts",
-            "Misc. Assembly Fasteners",
-            "Fresh Fruit",
-            "Frozen Steaks",
-            "Precious Jewels",
-            "Optical Hard Drives",
-            "Polyjuice Potion",
-            "Live Bait"
+		"Spare F-22 Parts",
+		"Violins",
+		"Antique Baseballs",
+		"Frozen Cells",
+		"Machined Parts",
+		"Misc. Assembly Fasteners",
+		"Fresh Fruit",
+		"Frozen Steaks",
+		"Precious Jewels",
+		"Optical Hard Drives",
+		"Polyjuice Potion",
+		"Live Bait"
     };
 
     public static final String[] OPERATOR_NAMES = new String[]{
-            "R. Kint",
-            "H. Potter",
-            "A. Ventura",
-            "H. Lime",
-            "S. Kowalski",
-            "D. Vader",
-            "S. Spade",
-            "D. Strangelove",
-            "T. Montana",
-            "N. Rae",
-            "J. Benjamin",
-            "A. DeLarge",
-            "J. Cousteau",
-            "E. Scissorhands",
-            "G. Bailey",
-            "Lt. Kilgore",
-            "T. Dude",
-            "F. Booth",
-            "F. Kreuger"
+		"A. Kint",
+		"H. Potter",
+		"A. Ventura",
+		"H. Lime",
+		"S. Kowalski",
+		"D. Vader",
+		"S. Spade",
+		"D. Strangelove",
+		"T. Montana",
+		"N. Rae",
+		"J. Benjamin",
+		"A. DeLarge",
+		"J. Cousteau",
+		"E. Scissorhands",
+		"G. Bailey",
+		"Lt. Kilgore",
+		"T. Dude",
+		"F. Booth",
+		"F. Kreuger"
     };
 
 }
