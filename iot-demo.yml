@@ -118,7 +118,7 @@ parameters:
   value: "truck-"
 - description: Displayed title of web dashboard
   name: DASHBOARD_WEB_TITLE
-  value: "Red Hat + Eurotech IoT Fleet Telematics Demo"
+  value: "Dominion Asset Tracking Telematics Demo"
   required: true
 
 labels:

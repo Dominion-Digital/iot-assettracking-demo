@@ -1,4 +1,4 @@
-Red Hat Fleet Telematics & Asset Tracking IoT Demo
+Dominion Asset Tracking Telematics Demo
 ==================================================
 This is an example IoT demo showing a realtime updating dashboard of data streaming from an
 IoT gateway device (based on Eclipse Kura) through an Eclipse Kapua-based instance.
