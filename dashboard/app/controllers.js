@@ -162,7 +162,7 @@ angular.module('app')
                 $scope.facilities = Reports.getFacilities();
 
                 $scope.config = {
-                    units: 'metros cuadrados'
+                    units: 'm. cuadrados'
                 };
 
                 $scope.donutConfig = {
@@ -173,7 +173,7 @@ angular.module('app')
                 $scope.sparklineConfig = {
                     chartId: 'chart-spark',
                     tooltipType: 'procentaje',
-                    units: 'metros cuadrados'
+                    units: 'm. cuadrados'
                 };
 
                 $scope.centerLabel = "usado";
@@ -357,8 +357,8 @@ angular.module('app')
 
 
                 $scope.size = {
-                    "name": 'Metros cuadrados',
-                    "title": 'Metros cuadrados',
+                    "name": 'm. cuadrados',
+                    "title": 'm. cuadrados',
                     "count": $filter('number')(facility.size, 1),
                     "iconClass": 'fa fa-2x fa-arrows',
                     "notifications": [{
