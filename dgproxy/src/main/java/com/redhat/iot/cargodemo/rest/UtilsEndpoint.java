@@ -96,9 +96,9 @@ public class UtilsEndpoint {
             newVehicle.setDestination(v_dest);
 
             List<Telemetry> vehicleTelemetry = new ArrayList<>();
-            vehicleTelemetry.add(new Telemetry("°C", 250.0, 150.0, "Engine Temp", "temp"));
+            vehicleTelemetry.add(new Telemetry("°C", 250.0, 150.0, "Temperatura motor", "temp"));
             vehicleTelemetry.add(new Telemetry("rpm", 2200.0, 500.0, "RPM", "rpm"));
-            vehicleTelemetry.add(new Telemetry("psi", 80.0, 30.0, "Oil Pressure", "oilpress"));
+            vehicleTelemetry.add(new Telemetry("psi", 80.0, 30.0, "Presión aceite", "oilpress"));
             newVehicle.setTelemetry(vehicleTelemetry);
 
             Date v_eta = new Date(new Date().getTime() + DAY_IN_MS + (long)(Math.random() * DAY_IN_MS * 2));
@@ -140,10 +140,10 @@ public class UtilsEndpoint {
         route.add(p_dest);
 
         List<Telemetry> telemetry = new ArrayList<>();
-        telemetry.add(new Telemetry("°C", 40.0, 0.0, "Temperature", "Ambient"));
-        telemetry.add(new Telemetry("%", 100.0, 0.0, "Humidity", "Humidity"));
-        telemetry.add(new Telemetry("lm", 400.0, 100.0, "Light", "Light"));
-        telemetry.add(new Telemetry("inHg", 31, 29, "Pressure", "Pressure"));
+        telemetry.add(new Telemetry("°C", 40.0, 0.0, "Temperatura", "Ambiente"));
+        telemetry.add(new Telemetry("%", 100.0, 0.0, "Humidity", "Humedad"));
+        telemetry.add(new Telemetry("lm", 400.0, 100.0, "Luz", "Luz"));
+        telemetry.add(new Telemetry("inHg", 31, 29, "Presión", "Presión"));
 
         Customer cust = customerCache.get(rand(COMPANIES));
 
@@ -152,7 +152,7 @@ public class UtilsEndpoint {
         Date eta = new Date(new Date().getTime() + DAY_IN_MS + (long)(Math.random() * DAY_IN_MS * 4));
 
         Shipment s = new Shipment(customerCache.get(rand(COMPANIES)),
-                "Package " + sensor_id + "/" + vin, pkgDesc,
+                "Paquete " + sensor_id + "/" + vin, pkgDesc,
                 sensor_id, route, etd, eta, Math.random() * 2000, v);
 
         s.setTelemetry(telemetry);
@@ -220,8 +220,8 @@ public class UtilsEndpoint {
         result.add(facilitySummary);
 
         Summary mgrs = new Summary();
-        mgrs.setName("fake");
-        mgrs.setTitle("Managers");
+        mgrs.setName("falso");
+        mgrs.setTitle("Directores");
         mgrs.setCount(23);
         mgrs.setWarningCount(4);
         mgrs.setErrorCount(1);
@@ -233,8 +233,8 @@ public class UtilsEndpoint {
         Map<String, Operator> cache = dgService.getOperators();
 
         Summary summary = new Summary();
-        summary.setName("operators");
-        summary.setTitle("Operators");
+        summary.setName("operarios");
+        summary.setTitle("Operarios");
         summary.setCount(cache.keySet().size());
 
         return summary;
@@ -245,8 +245,8 @@ public class UtilsEndpoint {
         Map<String, Facility> cache = dgService.getFacilities();
 
         Summary summary = new Summary();
-        summary.setName("facilities");
-        summary.setTitle("Facilities");
+        summary.setName("plantas");
+        summary.setTitle("Plantas");
         summary.setCount(cache.keySet().size());
 
         long warningCount = cache.keySet().stream()
@@ -269,8 +269,8 @@ public class UtilsEndpoint {
         Map<String, Shipment> cache = dgService.getShipments();
 
         Summary summary = new Summary();
-        summary.setName("packages");
-        summary.setTitle("Packages");
+        summary.setName("paquetes");
+        summary.setTitle("Paquetes");
         summary.setCount(cache.keySet().size());
 
 
@@ -294,8 +294,8 @@ public class UtilsEndpoint {
         Map<String, Customer> cache = dgService.getCustomers();
 
         Summary summary = new Summary();
-        summary.setName("clients");
-        summary.setTitle("Clients");
+        summary.setName("clientes");
+        summary.setTitle("Clientes");
         summary.setCount(cache.keySet().size());
         return summary;
 
@@ -305,8 +305,8 @@ public class UtilsEndpoint {
         Map<String, Vehicle> cache = dgService.getVehicles();
 
         Summary summary = new Summary();
-        summary.setName("vehicles");
-        summary.setTitle("Vehicles");
+        summary.setName("vehículos");
+        summary.setTitle("Vehículos");
         summary.setCount(cache.keySet().size());
 
 
@@ -327,23 +327,23 @@ public class UtilsEndpoint {
 
 
     public static final String[] COMPANIES = new String[]{
-            "Wonka Industries",
-            "Acme Corp",
-            "Stark Industries",
-            "Ollivander's Wand Shop",
-            "Gekko & Co",
-            "Wayne Enterprises",
-            "Cyberdyne Systems",
-            "Cheers",
-            "Genco Pura",
-            "NY Enquirer",
-            "Duff Beer",
-            "Bubba Gump Shrimp Co",
-            "Olivia Pope & Associates",
-            "Sterling Cooper",
-            "Soylent",
-            "Hooli",
-            "Good Burger"
+            "Azurmendi",
+            "Arzak",
+            "Akelarre",
+            "DiverXO",
+            "Sant Pau",
+            "El Celler de Can Roca",
+            "Lasarte",
+            "ABaC",
+            "Kabuki Raw",
+            "Subway",
+            "KFC",
+            "Pans & Company",
+            "McDonald's",
+            "Five Guys",
+            "Domino's Pizza",
+            "TGB",
+            "Telepeizza"
     };
 
     public static final String[] ORIGINS = new String[]{
@@ -374,62 +374,62 @@ public class UtilsEndpoint {
     };
 
     public static final String[] VEHICLE_TYPES = new String[] {
-            "Box truck",
-            "Van",
-            "Cutaway van chassis",
-            "Medium Duty Truck such as Ford F-650 in North America",
-            "Medium Standard Truck",
-            "Platform truck",
-            "Flatbed truck (may also be light duty trucks)",
-            "Firetruck (may also be a heavy truck)",
-            "Recreational Vehicle or Motorhome",
-            "Concrete transport truck (cement mixer)",
-            "Mobile crane",
-            "Dump truck",
-            "Garbage truck",
-            "Log carrier",
-            "Refrigerator truck",
-            "Tractor unit",
-            "Tank truck",
-            "Heavy Hauler",
-            "F-35"
+            "Tractocamión",
+            "Furgoneta",
+            "Camión articulado",
+            "Trailer",
+            "Tren de carretera",
+            "Volqueta",
+            "Tolva",
+            "Camión jaula granel",
+            "Cama baja",
+            "Caja cerrada de 53 pies",
+            "Caja cerrada de 48 pies",
+            "Rabon",
+            "Tortón",
+            "Plataforma",
+            "Autotanque",
+            "Camión jaula enlonada",
+            "Autotanque para asfalto",
+            "Pick up",
+            "SUV"
     };
 
     public static final String[] PKG_DESCS = new String[] {
-		"Spare F-22 Parts",
-		"Violins",
-		"Antique Baseballs",
-		"Frozen Cells",
-		"Machined Parts",
-		"Misc. Assembly Fasteners",
-		"Fresh Fruit",
-		"Frozen Steaks",
-		"Precious Jewels",
-		"Optical Hard Drives",
-		"Polyjuice Potion",
-		"Live Bait"
+		"Refrescos con gas",
+		"Mobiliario",
+		"Elementos ornamentales",
+		"Material sanitario",
+		"Pequeños electrodomésticos",
+		"Discos vinilo",
+		"Fruta fresca",
+		"Carne congelada",
+		"Animales vivos",
+		"Pescado congelado",
+		"Material de limpieza",
+		"Grandes electrodomésticos"
     };
 
     public static final String[] OPERATOR_NAMES = new String[]{
-		"A. Kint",
-		"H. Potter",
-		"A. Ventura",
-		"H. Lime",
-		"S. Kowalski",
-		"D. Vader",
-		"S. Spade",
-		"D. Strangelove",
-		"T. Montana",
-		"N. Rae",
-		"J. Benjamin",
-		"A. DeLarge",
-		"J. Cousteau",
-		"E. Scissorhands",
-		"G. Bailey",
-		"Lt. Kilgore",
-		"T. Dude",
-		"F. Booth",
-		"F. Kreuger"
+		"M. Troisgros",
+		"Y. Alleno",
+		"J. Roca",
+		"A. Donckele",
+		"P. Gagnaire",
+		"E. Renaut",
+		"E. Crippa",
+		"P. Barbot",
+		"S. Yamamoto",
+		"A. Ducasse",
+		"M. Berasategui",
+		"A. Aduriz",
+		"J. Alija",
+		"C. Ruscalleda",
+		"V. Arguinzoniz",
+		"E. Arzak",
+		"E. Atxa",
+		"Q. Dacosta",
+		"J. Arzak"
     };
 
 }

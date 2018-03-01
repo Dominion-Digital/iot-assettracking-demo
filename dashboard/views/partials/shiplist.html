@@ -12,16 +12,16 @@
  -->
 <div id="shiplist">
 
-    <h2>Client Shipments</h2>
+    <h2>Envíos por cliente</h2>
     <hr>
 
     <div ng-if="!shipments">
         <icon class="fa fa-info-circle"></icon>
-        &nbsp;Choose a vehicle to view its packages
+        &nbsp;Elige un vehículo para ver sus paquetes
     </div>
 
     <div ng-if="shipments.length <= 0">
-        No Shipments found for vehicle <em>{{selectedVehicle.desc}}</em>. Try picking a different Vehicle.
+        No se han encontrado envíos para el vehículo <em>{{selectedVehicle.desc}}</em>. Prueba eligiendo otro vehñiculo.
     </div>
 
     <div ng-if="shipments.length > 0">
@@ -30,7 +30,7 @@
                 <div class="input-group">
                     <div class="input-group-addon"><i class="fa fa-search"></i>
                     </div>
-                    <input ng-model="shipQuery" type="text" placeholder="Find..." autofocus>
+                    <input ng-model="shipQuery" type="text" placeholder="Buscar..." autofocus>
                 </div>
             </div>
         </form>
@@ -41,10 +41,10 @@
         <table  class="table table-fixed table-striped table-bordered table-hover" id="myShipTable">
             <thead>
             <tr>
-                <th sortable-header col="customer.name">Client Package</th>
-                <th>Route</th>
+                <th sortable-header col="customer.name">Paquete de cliente</th>
+                <th>Ruta</th>
                 <th>ETA</th>
-                <th>Status</th>
+                <th>Estado</th>
             </tr>
             </thead>
 

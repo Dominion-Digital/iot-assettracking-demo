@@ -19,19 +19,19 @@
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setPeriod('month');">Last Month</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setPeriod('year');">Last Year</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setPeriod('all');">Beginning of Time</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setPeriod('month');">Último mes</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setPeriod('year');">Último año</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setPeriod('all');">Desde el inicio</a></li>
         </ul>
     </div>
 
-    <h2>Business Trends</h2>
+    <h2>Tendencias del negocio</h2>
 
     <ul class="nav nav-tabs nav-tabs-pf">
-        <li ng-class="{ active: (getSelected() == 'fuel')}"><a ng-click="setSelected('fuel');">Fuel Efficiency</a></li>
-        <li ng-class="{ active: (getSelected() == 'value')}"><a ng-click="setSelected('value');">Value Under Transport</a></li>
-        <li ng-class="{ active: (getSelected() == 'timeperf')}"><a ng-click="setSelected('timeperf');">On-Time Performance</a></li>
-        <li ng-class="{ active: (getSelected() == 'custsat')}"><a ng-click="setSelected('custsat');">Customer Satisfaction</a></li>
+        <li ng-class="{ active: (getSelected() == 'fuel')}"><a ng-click="setSelected('fuel');">Eficiencia del combustible</a></li>
+        <li ng-class="{ active: (getSelected() == 'value')}"><a ng-click="setSelected('value');">Valor del transporte</a></li>
+        <li ng-class="{ active: (getSelected() == 'timeperf')}"><a ng-click="setSelected('timeperf');">Entregas a tiempo</a></li>
+        <li ng-class="{ active: (getSelected() == 'custsat')}"><a ng-click="setSelected('custsat');">Satisfación del consumidor</a></li>
     </ul>
 
     <div pf-c3-chart id="chartId" config="chartConfig" get-chart-callback="getChart"></div>

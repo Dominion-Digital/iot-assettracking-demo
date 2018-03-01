@@ -18,13 +18,13 @@
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setFacPeriod('month');">Last Month</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setFacPeriod('year');">Year To Date</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setFacPeriod('all');">Beginning of Time</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setFacPeriod('month');">Último mes</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setFacPeriod('year');">Último año</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="setFacPeriod('all');">Desde el inicio</a></li>
         </ul>
     </div>
 
-    <h2>Top Facilities</h2>
+    <h2>Top plantas</h2>
 
     <div ng-repeat="facility in facilities | limitTo : 3  track by $index">
         <div pf-utilization-bar-chart chart-data="data[facility.name]" chart-title="titles[facility.name]" units="units"

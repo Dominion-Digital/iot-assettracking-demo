@@ -37,7 +37,7 @@
             <a ng-href="" ng-click="resetAll();"><span title="Reset Demo Data" class="fa fa-refresh"></span></a>
           </li>
           <li>
-            <a ng-href="#/"><span class="fa fa-truck"></span>&nbsp;{{shipmentCount}} Shipment(s)</a>
+            <a ng-href="#/"><span class="fa fa-truck"></span>&nbsp;{{shipmentCount}} Envío(s)</a>
           </li>
           <li class="dropdown">
             <a ng-href="#/" class="dropdown-toggle" data-toggle="dropdown">
@@ -46,20 +46,20 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a ng-href="#/"><span class="pficon pficon-user"></span>&nbsp;Profile</a>
+                <a ng-href="#/"><span class="pficon pficon-user"></span>&nbsp;Perfil</a>
               </li>
               <li>
-                <a href="" ng-click="logout()"><span class="fa fa-sign-out"></span>&nbsp;Logout</a>
+                <a href="" ng-click="logout()"><span class="fa fa-sign-out"></span>&nbsp;Salir</a>
               </li>
             </ul>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-primary">
           <li ng-class="{ active: isActive('/')}">
-            <a ng-href="#/" class="active">Fleet Central</a>
+            <a ng-href="#/" class="active">Flota</a>
           </li>
           <li ng-class="{ active: isActive('/exec')}">
-            <a ng-href="#/exec">Business Central</a>
+            <a ng-href="#/exec">Central</a>
           </li>
         </ul>
       </div>

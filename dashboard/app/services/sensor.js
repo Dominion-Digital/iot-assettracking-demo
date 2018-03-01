@@ -58,7 +58,7 @@ angular.module('app')
 
             // Warn if the browser doesn't support addEventListener or the Page Visibility API
             if (typeof document.addEventListener === "undefined" || typeof document[hidden] === "undefined") {
-                console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+                console.log("Esta demo requiere un navegador, como Google Chrome o Firefox, que soporte la visibilidad de la API de la página.");
             } else {
                 // Handle page visibility change
                 document.addEventListener(visibilityChange, handleVisibilityChange, false);
@@ -383,9 +383,9 @@ angular.module('app')
                 }, 5000));
                 var hitempalert = {
                     date: new Date().getTime(),
-                    from: "Operations",
-                    desc: "Truck Maintenance Required",
-                    message: "Your vehicle is in need of maintenance. A maintenance crew has been dispatched to the " + vehicle.destination.name + " facility (bay 4), please arrive no later than 10:0am EDT",
+                    from: "Operaciones",
+                    desc: "Mantenimiento de vehículo necesario",
+                    message: "Tu vehículo necesita mantenimiento. Un operario de mantenimiento se desplazará a " + vehicle.destination.name + " planta, por favor, llegue antes de las 10:00am",
                     type: 'VEHICLE',
                     truckid: vehicle.vin,
                     sensorid: null
@@ -437,9 +437,9 @@ angular.module('app')
             $timeout(function() {
                 var hitempalert = {
                     date: new Date().getTime(),
-                    from: "Operations",
-                    desc: "Client Package Alert",
-                    message: 'Temperature on package ' + pkg.sensor_id + ' (' + pkg.desc + ' for client ' + pkg.customer.name + ') on shelf 12 is out of spec (42.2°C), please verify condition',
+                    from: "Operaciones",
+                    desc: "Alerta de paquete de cliente",
+                    message: 'Temperatura del paquete ' + pkg.sensor_id + ' (' + pkg.desc + ' para el cliente ' + pkg.customer.name + ') en el estante 12 está fuera de la norma (42.2°C), por favor, verifique la condición',
                     type: 'PACKAGE',
                     truckid: vehicle.vin,
                     sensorid: pkg.sensor_id

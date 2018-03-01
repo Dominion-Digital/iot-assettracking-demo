@@ -12,10 +12,10 @@
  -->
 <div id="vehicles">
 
-    <h2>Vehicles</h2>
+    <h2>Vehículos</h2>
     <hr>
     <div ng-if="vehicles.length <= 0">
-        No vehicles found. Perhaps you need to <a href="#" ng-click="resetAll()">initialize the system</a>?
+        No se han encontrado vehículos. Quizás deberías <a href="#" ng-click="resetAll()">inicializar el sistema</a>?
     </div>
 
     <div ng-if="vehicles.length > 0">
@@ -24,7 +24,7 @@
                 <div class="input-group">
                     <div class="input-group-addon"><i class="fa fa-search"></i>
                     </div>
-                    <input ng-model="aquery" type="text" placeholder="Find..." autofocus>
+                    <input ng-model="aquery" type="text" placeholder="Buscar..." autofocus>
                 </div>
             </div>
         </form>
@@ -35,10 +35,10 @@
                 <table class="table table-striped table-bordered table-hover" id="myVehiclesTable">
                     <thead>
                     <tr>
-                        <th sortable-header col="desc">Vehicle ID</th>
-                        <th>Route</th>
+                        <th sortable-header col="desc">Vehículo ID</th>
+                        <th>Ruta</th>
                         <th>ETA</th>
-                        <th>Status</th>
+                        <th>Estado</th>
                     </tr>
                     </thead>
 

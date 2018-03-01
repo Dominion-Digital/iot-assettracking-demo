@@ -12,29 +12,29 @@
  -->
 <div>
 
-    <h2>Package Telemetry</h2>
+    <h2>Telemetría de envíos</h2>
     <hr>
-    <em ng-if="selectedPkg"><center>{{selectedPkg.desc}} (Client: {{selectedPkg.customer.name}})</center></em>
+    <em ng-if="selectedPkg"><center>{{selectedPkg.desc}} (Cliente: {{selectedPkg.customer.name}})</center></em>
 
 
     <!--<div pf-trends-chart config="config[telemetry.name]" chart-data="data[telemetry.name]">-->
 
     <div ng-if="!selectedPkg">
-        <icon class="fa fa-info-circle"></icon>&nbsp;Choose a shipment to view its telemetry
+        <icon class="fa fa-info-circle"></icon>&nbsp;Elige un envío para ver su telemetría
     </div>
 
     <div ng-repeat="telemetry in selectedPkg.telemetry track by $index">
 
 
         <div ng-if="!n3data[telemetry.name].hasData">
-            <icon class="fa fa-2x fa-exclamation-triangle"></icon>&nbsp;Current {{telemetry.name}} unavailable (<a ng-click="showHistory(telemetry);">History</a>)
+            <icon class="fa fa-2x fa-exclamation-triangle"></icon>&nbsp;Actual {{telemetry.name}} no disponible (<a ng-click="showHistory(telemetry);">Histórico</a>)
         </div>
 
         <div ng-if="n3data[telemetry.name].hasData">
             <span>{{telemetry.name}}</span>
             <span style="color: red;" ng-if="n3options[telemetry.name].warning">&nbsp;<icon title="{{telemetry.name}} out of bounds ({{telemetry.min}}{{telemetry.units}} < {{telemetry.name}} < {{telemetry.max}}{{telemetry.units}})" class="fa fa-exclamation-triangle"></icon></span>
             <div style="float:right;">
-                <a ng-click="showHistory(telemetry);">History</a>
+                <a ng-click="showHistory(telemetry);">Histórico</a>
             </div>
         </div>
         <div class="container-fluid" ng-if="n3data[telemetry.name].hasData">

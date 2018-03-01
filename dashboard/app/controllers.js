@@ -40,7 +40,7 @@ angular.module('app')
         ['$scope', '$http', '$filter', 'Notifications', 'SensorData', 'Reports',
             function ($scope, $http, $filter, Notifications, SensorData, Reports) {
 
-                $scope.stateTimeFrame = 'Last Month';
+                $scope.stateTimeFrame = 'Último mes';
                 var today = new Date();
                 var dates = ['dates'];
                 var yTemp = ['used'];
@@ -64,11 +64,11 @@ angular.module('app')
                 $scope.setBizStatePeriod = function(period) {
 
                     if (period == 'month') {
-                        $scope.stateTimeFrame = "Last Month";
+                        $scope.stateTimeFrame = "Último mes";
                     } else if (period == 'year') {
-                        $scope.stateTimeFrame = "Year to Date";
+                        $scope.stateTimeFrame = "Último año";
                     } else {
-                        $scope.stateTimeFrame = "Beginning of Time";
+                        $scope.stateTimeFrame = "Desde el inicio";
                     }
 
                     $scope.bizStates.forEach(function(bizState) {
@@ -82,7 +82,7 @@ angular.module('app')
                             'chartId'      : name.replace(/[^A-Za-z0-9]/g, ''),
                             'layout'       : 'inline',
                             'trendLabel'   : name,
-                            'tooltipType'  : 'percentage',
+                            'tooltipType'  : 'porcentaje',
                             'valueType'     : 'actual'
                         },
                         data: {
@@ -104,16 +104,16 @@ angular.module('app')
             function ($scope, $http, $filter, Notifications, SensorData, Reports) {
                 $scope.footerConfig = {
                     'iconClass' : 'fa fa-wrench',
-                    'text'      : 'View All Events',
+                    'text'      : 'Ver todos los eventos',
                     'callBackFn': function () {
                         alert("Footer Callback Fn Called");
                     }
                 };
 
                 $scope.filterConfig = {
-                    'filters' : [{label:'Last Year', value:'year'},
-                        {label:'Last Month', value:'month'},
-                        {label:'Last Week', value:'week'}],
+                    'filters' : [{label:'Último año', value:'year'},
+                        {label:'Último mes', value:'month'},
+                        {label:'Última semana', value:'week'}],
                     'callBackFn': function (f) {
                         var yVals = ['Calls'];
                         for (var d = 12 - 1; d >= 0; d--) {
@@ -172,11 +172,11 @@ angular.module('app')
 
                 $scope.sparklineConfig = {
                     chartId: 'chart-spark',
-                    tooltipType: 'percentage',
-                    units: 'sq. ft.'
+                    tooltipType: 'procentaje',
+                    units: 'metros cuadrados'
                 };
 
-                $scope.centerLabel = "used";
+                $scope.centerLabel = "usado";
                 $scope.custChartHeight = 60;
                 $scope.custShowXAxis = false;
                 $scope.custShowYAxis = false;
@@ -233,19 +233,19 @@ angular.module('app')
                 $scope.units = "";
                 $scope.donutData = {};
                 $scope.donutConfig = {};
-                $scope.facTimeFrame = "Last Month";
+                $scope.facTimeFrame = "Último mes";
 
                 $scope.setFacPeriod = function(period) {
                     $scope.facPeriod = period;
                     switch (period) {
                         case 'year':
-                            $scope.facTimeFrame = "Year to Date";
+                            $scope.facTimeFrame = "Último año";
                             break;
                         case 'month':
-                            $scope.facTimeFrame = "Last Month";
+                            $scope.facTimeFrame = "Último mes";
                             break;
                         default:
-                            $scope.facTimeFrame = "Beginning of Time";
+                            $scope.facTimeFrame = "Desde el inicio";
                     }
                 };
 
@@ -402,21 +402,21 @@ angular.module('app')
             previousUse = ['Previous Period'];
 
             if (period == 'month') {
-                $scope.timeFrame = "Last Month";
+                $scope.timeFrame = "Último mes";
                 for (var i = 30; i >= 0; i--) {
                     xPoints.push(now - (i * 24 * 60 * 60 * 1000));
                     currentUse.push(Math.random() * 200);
                     previousUse.push(Math.random() * 200);
                 }
             } else if (period == 'year') {
-                $scope.timeFrame = "Last Year";
+                $scope.timeFrame = "Último año";
                 for (var i = 12; i >= 0; i--) {
                     xPoints.push(now - (i * 30 * 24 * 60 * 60 * 1000));
                     currentUse.push(Math.random() * 200);
                     previousUse.push(Math.random() * 200);
                 }
             } else {
-                $scope.timeFrame = "Beginning of Time";
+                $scope.timeFrame = "Desde el inicio";
                 for (var i = 60; i >= 0; i--) {
                     xPoints.push(now - (i * 30 * 24 * 60 * 60 * 1000));
                     currentUse.push(Math.random() * 200);
@@ -479,7 +479,7 @@ angular.module('app')
         var xPoints = ['x'], currentUse = ['Current Period'], previousUse = ['Previous Period'];
 
         $scope.setPeriod('year');
-        $scope.timeFrame = "Last Year";
+        $scope.timeFrame = "Último año";
 
 
             }])
