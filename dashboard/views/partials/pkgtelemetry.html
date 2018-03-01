@@ -27,7 +27,7 @@
 
 
         <div ng-if="!n3data[telemetry.name].hasData">
-            <icon class="fa fa-2x fa-exclamation-triangle"></icon>&nbsp;Actual {{telemetry.name}} no disponible (<a ng-click="showHistory(telemetry);">Histórico</a>)
+            <icon class="fa fa-2x fa-exclamation-triangle"></icon>&nbsp;{{telemetry.name}} actual no disponible (<a ng-click="showHistory(telemetry);">Histórico</a>)
         </div>
 
         <div ng-if="n3data[telemetry.name].hasData">

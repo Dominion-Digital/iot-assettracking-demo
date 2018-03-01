@@ -162,7 +162,7 @@ angular.module('app')
                 $scope.facilities = Reports.getFacilities();
 
                 $scope.config = {
-                    units: 'sq. ft.'
+                    units: 'metros cuadrados'
                 };
 
                 $scope.donutConfig = {
@@ -357,7 +357,7 @@ angular.module('app')
 
 
                 $scope.size = {
-                    "name": 'Sq. Ft.',
+                    "name": 'Metros cuadrados',
                     "title": 'Metros cuadrados',
                     "count": $filter('number')(facility.size, 1),
                     "iconClass": 'fa fa-2x fa-arrows',
