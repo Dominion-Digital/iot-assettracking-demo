@@ -98,7 +98,7 @@ public class UtilsEndpoint {
             List<Telemetry> vehicleTelemetry = new ArrayList<>();
             vehicleTelemetry.add(new Telemetry("°C", 250.0, 150.0, "Temperatura motor", "temp"));
             vehicleTelemetry.add(new Telemetry("rpm", 2200.0, 500.0, "RPM", "rpm"));
-            vehicleTelemetry.add(new Telemetry("psi", 80.0, 30.0, "Presión aceite", "oilpress"));
+            vehicleTelemetry.add(new Telemetry("psi", 80.0, 30.0, "Aceite", "oilpress"));
             newVehicle.setTelemetry(vehicleTelemetry);
 
             Date v_eta = new Date(new Date().getTime() + DAY_IN_MS + (long)(Math.random() * DAY_IN_MS * 2));
@@ -141,7 +141,7 @@ public class UtilsEndpoint {
 
         List<Telemetry> telemetry = new ArrayList<>();
         telemetry.add(new Telemetry("°C", 40.0, 0.0, "Temperatura", "Ambiente"));
-        telemetry.add(new Telemetry("%", 100.0, 0.0, "Humidity", "Humedad"));
+        telemetry.add(new Telemetry("%", 100.0, 0.0, "Humedad", "Humedad"));
         telemetry.add(new Telemetry("lm", 400.0, 100.0, "Luz", "Luz"));
         telemetry.add(new Telemetry("inHg", 31, 29, "Presión", "Presión"));
 

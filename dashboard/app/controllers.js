@@ -49,7 +49,7 @@ angular.module('app')
                     yTemp.push('');
                 }
 
-                var actuals = ["Retention", "Margin", "Facilities", "P/E Ratio", "Closed"];
+                var actuals = ["Retención", "Margen", "Plantas", "P/E Ratio", "Cerrado"];
 
                 function fill(data) {
                     return data.map(function(v, idx) {
@@ -136,11 +136,11 @@ angular.module('app')
                 //tooltip: [{"x":"2017-04-10T01:37:32.215Z","value":8,"id":"Calls","index":9,"name":"Calls"}]
 
                 $scope.mconfig = {
-                    'title'        : 'This Period',
+                    'title'        : 'Este periodo',
                     'layout'       : 'compact',
                     'valueType'    : 'actual',
-                    'units'        : 'Events',
-                    'tooltipType'  : 'used',
+                    'units'        : 'Eventos',
+                    'tooltipType'  : 'usado',
                     'tooltipFn': function (d) {
                         return (d[0].value + " Calls on " + $filter('date')(d[0].x, 'mediumDate'))
                     }
@@ -358,7 +358,7 @@ angular.module('app')
 
                 $scope.size = {
                     "name": 'Sq. Ft.',
-                    "title": 'Sq. Ft.',
+                    "title": 'Metros cuadrados',
                     "count": $filter('number')(facility.size, 1),
                     "iconClass": 'fa fa-2x fa-arrows',
                     "notifications": [{
@@ -367,7 +367,7 @@ angular.module('app')
                 };
                 $scope.age = {
                     "name": 'Years',
-                    "title": 'Years',
+                    "title": 'Años',
                     "count": "13.4",
                     "iconClass": 'fa fa-2x fa-calendar',
                     "notifications": [{
@@ -398,8 +398,8 @@ angular.module('app')
         $scope.setPeriod = function(period) {
             $scope.period = period;
             xPoints = ['x'];
-            currentUse = ['Current Period'];
-            previousUse = ['Previous Period'];
+            currentUse = ['Periodo actual'];
+            previousUse = ['Periodo anterior'];
 
             if (period == 'month') {
                 $scope.timeFrame = "Último mes";
@@ -476,7 +476,7 @@ angular.module('app')
 
 
         var now = new Date().getTime();
-        var xPoints = ['x'], currentUse = ['Current Period'], previousUse = ['Previous Period'];
+        var xPoints = ['x'], currentUse = ['Periodo actual'], previousUse = ['Periodo anterior'];
 
         $scope.setPeriod('year');
         $scope.timeFrame = "Último año";
@@ -995,7 +995,7 @@ angular.module('app')
                     $scope.pkg = pkg;
                 });
                 $scope.userInfo = {
-                    fullName: "Mary Q. Shipper"
+                    fullName: "Juan I. Delgado"
                 };
 
                 $scope.$on("resetAll", function(evt) {
@@ -1008,10 +1008,10 @@ angular.module('app')
                         method: 'POST',
                         url: resetUrl
                     }).then(function (response) {
-                        Notifications.success("Reset successful.");
+                        Notifications.success("Reset correcto.");
                         location.reload();
                     }, function err(response) {
-                        Notifications.error("Error resetting. Reload to retry");
+                        Notifications.error("Error reseteando. Recarga para volver a intentarlo");
                     });
                 };
                 $scope.shipmentCount = Reports.getShipCount();
@@ -1025,7 +1025,7 @@ angular.module('app')
 
                 $scope.cascadingAlert = function() {
                     if (!$scope.veh) {
-                        Notifications.warn("You must first choose a vehicle for which to simulate failure!");
+                        Notifications.warn("¡Primero debes elegir un vehículo en el cual simular el fallo!");
                         return;
                     }
                     $scope.vehicleAlertColor = 'gray';
@@ -1037,7 +1037,7 @@ angular.module('app')
 
                 $scope.cascadingPkgAlert = function() {
                     if (!$scope.pkg || !$scope.veh) {
-                        Notifications.warn("You must first choose a vehicle and package for which to simulate package failure!");
+                        Notifications.warn("¡Primero debes elegir un vehículo en el cual simular el fallo!");
                         return;
                     }
                     $scope.packageAlertColor = 'gray';
